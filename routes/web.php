@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('app');
-});
+Route::view('/', 'projects.index')->name('projects.index');
+Route::view('/project/{projectId}', 'projects.show')->name('projects.show');
